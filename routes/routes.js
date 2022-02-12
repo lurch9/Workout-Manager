@@ -48,8 +48,8 @@ router.get("/api/workouts/:id", ({ params, body }, res) => {
 router.get('/api/workouts', (req, res) => {
     Workout.find({}, {}, { sort: { 'created_at' : -1 } })
     .then(dbWorkout => {
-        console.log(dbWorkout)
-        res.json(dbWorkout)
+        console.log(dbWorkouts)
+        res.json(dbWorkouts)
     })
     .catch(err => {
         console.log(err)
@@ -61,8 +61,8 @@ router.get('/api/workouts', (req, res) => {
 router.post('/api/workouts', ({ body }, res) => {
     Workout.create({})
     .then(dbWorkout => {
-        console.log(dbWorkout)
-      res.json(dbWorkout);
+        console.log(dbWorkouts)
+      res.json(dbWorkouts);
     })
     .catch(err => {
         console.log(err)
