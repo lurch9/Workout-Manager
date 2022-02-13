@@ -1,6 +1,8 @@
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
+! require("./seeders/seed");
+
 
 const PORT = process.env.PORT || 3005;
 
@@ -17,7 +19,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useFindAndModify: false
 });
 
-//require(apiRoute)(app);
+
 require("./routes/html")(app);
 require("./routes/routes")(app);
 
