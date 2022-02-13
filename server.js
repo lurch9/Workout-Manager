@@ -1,6 +1,5 @@
 const express = require("express");
 const mongoose = require("mongoose");
-! require("./seeders/seed");
 
 const PORT = process.env.PORT || 3000;
 
