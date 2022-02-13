@@ -1,5 +1,4 @@
 const db = require("../models");
-const path = require("path");
 
 module.exports = function(app) {
     // App.get to pull up info for the workouts page
@@ -35,14 +34,6 @@ module.exports = function(app) {
           res.json(dbWorkout);
         }).catch(err => {
           res.status(400).json(err);
-        });
-
-        app.get("/exercise", function(req, res) {
-          res.sendFile(path.join(__dirname, "../public/exercise.html"));
-        });
-      
-        app.get("/stats", function(req, res) {
-          res.sendFile(path.join(__dirname, "../public/stats.html"));
         });
     });
 };
