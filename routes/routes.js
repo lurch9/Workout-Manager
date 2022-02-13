@@ -1,4 +1,4 @@
-const db = require("../models");
+const db = require("../models/workout");
 
 module.exports = function(app) {
     // App.get to pull up info for the workouts page
